@@ -163,6 +163,9 @@ const getSecurityId = (date) => {
                 newline: '\n',  // specify a newline character
                 headers: ['id', 'symbol', 'description'] // Specifying the headers
             });
+        })
+        .map((item)=>{
+            return item.date = date;
         });
 };
 
