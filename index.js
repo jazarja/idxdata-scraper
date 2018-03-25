@@ -241,7 +241,7 @@ const parseIndexWeightXls = (date, xlsFilename) => {
         .then((result)=>{
             return {
                 "index" : sheetNames[0],
-                "date" : date,
+                "date" : date.endOf('day'),
                 "components" : result
             };
         });
