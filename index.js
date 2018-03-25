@@ -197,7 +197,7 @@ const downloadZip = (url) => {
         })
 };
 
-const parseIndexWeightXls = (xlsFilename) => {
+const parseIndexWeightXls = (date, xlsFilename) => {
     const workbook = XLSX.readFile(xlsFilename);
     const sheetNames = workbook.SheetNames;
 
@@ -237,6 +237,7 @@ const parseIndexWeightXls = (xlsFilename) => {
         .then((result)=>{
             return {
                 "index" : sheetNames[0],
+                "date" : date,
                 "components" : result
             };
         });
@@ -259,7 +260,7 @@ const getIndexWeighting = (date) => {
             return readdir(directory)
         })
         .mapSeries((filename)=>{
-            return parseIndexWeightXls(directory+path.sep+filename);
+            return parseIndexWeightXls(date, directory+path.sep+filename);
         });
 };
 
