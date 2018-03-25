@@ -165,7 +165,8 @@ const getSecurityId = (date) => {
             });
         })
         .map((item)=>{
-            return item.date = date;
+            item.date = date;
+            return item;
         });
 };
 
