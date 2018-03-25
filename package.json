@@ -1,0 +1,28 @@
+{
+  "name": "idxdata-scraper",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "dotenv": "^5.0.1",
+    "fixy": "^1.1.0",
+    "fs-readdir-promise": "^1.0.1",
+    "lodash": "^4.17.5",
+    "moment": "^2.21.0",
+    "neat-csv": "^2.1.0",
+    "numeral": "^2.0.6",
+    "request": "^2.85.0",
+    "request-promise": "^4.2.2",
+    "tempy": "^0.2.1",
+    "unzipper": "^0.8.11",
+    "xlsx": "^0.12.6"
+  }
+}
