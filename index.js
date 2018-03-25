@@ -117,6 +117,7 @@ const getMarketIndex = (date) => {
             return parseMarketIndex(result);
         })
         .map((item) => {
+            item.date = date;
             item.volume = numeral(item.volume).value();
             item.value = numeral(item.value).value();
             item.freq = numeral(item.freq).value();
@@ -141,10 +142,10 @@ module.exports.getMarketIndex = (date) => {
     let context = null;
     if (!date) {
         if (moment().day() >= 1 && moment().day() <= 5)
-            context = moment(); else  // Weekdays
-            context = moment().day(-2); // All other days, return last friday
+            context = moment().endOf('day'); else  // Weekdays
+            context = moment().day(-2).endOf('day'); // All other days, return last friday
     } else {
-        context = moment(date);
+        context = moment(date).endOf('day');
     }
 
     return getMarketIndex(context);
@@ -259,8 +260,7 @@ const getIndexWeighting = (date) => {
         })
         .mapSeries((filename)=>{
             return parseIndexWeightXls(directory+path.sep+filename);
-        })
-        .then((result) => console.log(JSON.stringify(result,null,4)));
+        });
 };
 
 
