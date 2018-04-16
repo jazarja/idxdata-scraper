@@ -15,9 +15,9 @@ const XLSX = require('xlsx');
 const path = require('path');
 
 const USER_AGENT = "idxdata";
-const MARKET_INDEX_URL = "http://www.idxdata2.co.id/Market_Summary/Market_Indices";
-const SECURITY_ID_URL = "http://www.idxdata2.co.id/Download_Data/SecurityID";
-const INDEX_WEIGHT_URL = "http://www.idxdata2.co.id/Download_Data/Daily/Index_Weight";
+const MARKET_INDEX_URL = "http://www.idxdata3.co.id/Market_Summary/Market_Indices";
+const SECURITY_ID_URL = "http://www.idxdata3.co.id/Download_Data/SecurityID";
+const INDEX_WEIGHT_URL = "http://www.idxdata3.co.id/Download_Data/Daily/Index_Weight";
 
 const download = (url, expectedMime) => {
     let options = {
