@@ -23,6 +23,6 @@
     "request-promise": "^4.2.2",
     "tempy": "^0.2.1",
     "unzipper": "^0.8.11",
-    "xlsx": "^0.12.6"
+    "xlsx": "^0.17.0"
   }
 }
