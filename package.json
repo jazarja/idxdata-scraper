@@ -1,13 +1,21 @@
 {
   "name": "idxdata-scraper",
-  "version": "0.0.3",
-  "description": "",
+  "version": "0.0.4",
+  "description": "IDX data scraper",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "James Azarja",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jazarja/idxdata-scraper.git"
+  },
+  "keywords": [
+    "idx data",
+    "kode saham"
+  ],
   "dependencies": {
     "bluebird": "^3.5.1",
     "chai": "^4.1.2",
@@ -26,3 +34,4 @@
     "xlsx": "^0.17.0"
   }
 }
+
